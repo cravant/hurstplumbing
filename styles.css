@@ -1,0 +1,1034 @@
+/* ============================================
+   HURST PLUMBING CO. - STYLESHEET
+   Production ready CSS for static site
+   ============================================ */
+
+/* CUSTOMIZATION NOTES:
+   - Primary color (blue): #1e40af
+   - Accent color (darker blue): #1e3a8a
+   - Emergency color (red): #dc2626
+   - Modify these colors below if needed
+*/
+
+/* ============================================
+   RESET & BASE STYLES
+   ============================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fff;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    color: #1e40af;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ============================================
+   LAYOUT & CONTAINER
+   ============================================ */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ============================================
+   HEADER
+   ============================================ */
+
+header {
+    background-color: #fff;
+    border-bottom: 1px solid #e5e7eb;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.logo h1 {
+    font-size: 1.5rem;
+    color: #1e40af;
+    font-weight: 700;
+}
+
+.header-phone {
+    display: flex;
+    align-items: center;
+}
+
+.phone-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #1e40af;
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-decoration: none;
+}
+
+.phone-link:hover {
+    color: #1e3a8a;
+    text-decoration: none;
+}
+
+.phone-icon {
+    font-size: 1.2rem;
+}
+
+/* ============================================
+   NAVIGATION
+   ============================================ */
+
+nav {
+    background-color: #f9fafb;
+    border-top: 1px solid #e5e7eb;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px 0;
+    flex-wrap: wrap;
+}
+
+.nav-menu li a {
+    display: block;
+    padding: 10px 18px;
+    color: #4b5563;
+    font-weight: 500;
+    border-radius: 6px;
+    transition: all 0.2s;
+}
+
+.nav-menu li a:hover,
+.nav-menu li a.active {
+    background-color: #1e40af;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* ============================================
+   STICKY CALL BUTTON (MOBILE)
+   ============================================ */
+
+.sticky-call-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #1e40af;
+    color: #fff;
+    padding: 15px 25px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    z-index: 1000;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.sticky-call-btn:hover {
+    background-color: #1e3a8a;
+    transform: scale(1.05);
+    text-decoration: none;
+}
+
+/* Hide on larger screens */
+@media (min-width: 768px) {
+    .sticky-call-btn {
+        display: none;
+    }
+}
+
+/* ============================================
+   BUTTONS
+   ============================================ */
+
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 6px;
+    font-weight: 600;
+    text-align: center;
+    transition: all 0.2s;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn-primary {
+    background-color: #1e40af;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #1e3a8a;
+    transform: translateY(-2px);
+    text-decoration: none;
+}
+
+.btn-secondary {
+    background-color: #6b7280;
+    color: #fff;
+}
+
+.btn-secondary:hover {
+    background-color: #4b5563;
+    transform: translateY(-2px);
+    text-decoration: none;
+}
+
+.btn-emergency {
+    background-color: #dc2626;
+    color: #fff;
+}
+
+.btn-emergency:hover {
+    background-color: #b91c1c;
+    transform: translateY(-2px);
+    text-decoration: none;
+}
+
+.btn-large {
+    padding: 16px 36px;
+    font-size: 1.2rem;
+}
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+
+.hero {
+    background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
+    color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    opacity: 0.95;
+}
+
+/* ============================================
+   TRUST SECTION
+   ============================================ */
+
+.trust-section {
+    background-color: #f9fafb;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.reviews-badge {
+    display: inline-block;
+}
+
+.stars {
+    color: #fbbf24;
+    font-size: 2rem;
+    letter-spacing: 4px;
+    margin-bottom: 10px;
+}
+
+.review-text {
+    font-size: 1.3rem;
+    color: #1f2937;
+    margin-bottom: 5px;
+}
+
+.review-subtext {
+    color: #6b7280;
+    font-size: 1rem;
+}
+
+/* ============================================
+   SERVICES OVERVIEW (HOMEPAGE)
+   ============================================ */
+
+.services-overview {
+    padding: 60px 20px;
+}
+
+.services-overview h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: #1f2937;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.service-card {
+    background-color: #f9fafb;
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+}
+
+.service-card h3 {
+    color: #1e40af;
+    margin-bottom: 12px;
+    font-size: 1.3rem;
+}
+
+.service-card p {
+    color: #4b5563;
+    margin-bottom: 15px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* ============================================
+   SERVICE AREA
+   ============================================ */
+
+.service-area {
+    background-color: #f9fafb;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.service-area h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #1f2937;
+}
+
+.service-area p {
+    max-width: 800px;
+    margin: 0 auto;
+    color: #4b5563;
+    font-size: 1.1rem;
+}
+
+/* ============================================
+   CTA SECTION
+   ============================================ */
+
+.cta-section {
+    background-color: #1e40af;
+    color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.cta-section h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.cta-section p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    opacity: 0.95;
+}
+
+/* ============================================
+   PAGE HEADER
+   ============================================ */
+
+.page-header {
+    background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
+    color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.page-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 12px;
+}
+
+.page-header p {
+    font-size: 1.2rem;
+    opacity: 0.95;
+}
+
+/* ============================================
+   SERVICES DETAIL PAGE
+   ============================================ */
+
+.services-detail {
+    padding: 60px 20px;
+}
+
+.service-detail-card {
+    background-color: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 35px;
+    margin-bottom: 30px;
+}
+
+.service-detail-card h3 {
+    color: #1e40af;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.service-detail-card p {
+    color: #4b5563;
+    margin-bottom: 20px;
+    line-height: 1.7;
+}
+
+.service-list {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.service-list li {
+    padding: 8px 0;
+    padding-left: 25px;
+    position: relative;
+    color: #4b5563;
+}
+
+.service-list li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #1e40af;
+    font-weight: bold;
+}
+
+/* ============================================
+   EMERGENCY PAGE
+   ============================================ */
+
+.emergency-hero {
+    background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+    color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.emergency-badge {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.emergency-hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.emergency-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    opacity: 0.95;
+}
+
+.emergency-phone {
+    margin-top: 20px;
+}
+
+.emergency-content {
+    padding: 60px 20px;
+}
+
+.emergency-intro {
+    max-width: 900px;
+    margin: 0 auto 50px;
+}
+
+.emergency-intro h3 {
+    color: #1f2937;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.emergency-intro p {
+    color: #4b5563;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    line-height: 1.7;
+}
+
+.emergency-situations {
+    margin-bottom: 50px;
+}
+
+.emergency-situations h3 {
+    text-align: center;
+    color: #1f2937;
+    font-size: 2rem;
+    margin-bottom: 35px;
+}
+
+.emergency-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.emergency-item {
+    background-color: #fef2f2;
+    border: 2px solid #fee2e2;
+    padding: 25px;
+    border-radius: 8px;
+}
+
+.emergency-item h4 {
+    color: #dc2626;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.emergency-item p {
+    color: #4b5563;
+    line-height: 1.6;
+}
+
+.why-choose-emergency {
+    max-width: 1000px;
+    margin: 0 auto 50px;
+}
+
+.why-choose-emergency h3 {
+    text-align: center;
+    color: #1f2937;
+    font-size: 2rem;
+    margin-bottom: 35px;
+}
+
+.emergency-reasons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 30px;
+}
+
+.reason {
+    text-align: center;
+}
+
+.reason h4 {
+    color: #1e40af;
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+}
+
+.reason p {
+    color: #4b5563;
+    line-height: 1.6;
+}
+
+.emergency-tips {
+    background-color: #fef3c7;
+    border: 2px solid #fde68a;
+    border-radius: 8px;
+    padding: 35px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.emergency-tips h3 {
+    color: #92400e;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.emergency-tips p {
+    color: #78350f;
+    font-weight: 600;
+    margin: 20px 0 10px;
+}
+
+.emergency-tips ul {
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+.emergency-tips li {
+    color: #78350f;
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+.emergency-tips a {
+    color: #92400e;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+/* ============================================
+   ABOUT PAGE
+   ============================================ */
+
+.about-content {
+    padding: 60px 20px;
+}
+
+.about-intro {
+    max-width: 900px;
+    margin: 0 auto 50px;
+}
+
+.about-intro h3 {
+    color: #1f2937;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.about-intro p {
+    color: #4b5563;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    line-height: 1.7;
+}
+
+.about-values {
+    margin-bottom: 50px;
+}
+
+.about-values h3 {
+    text-align: center;
+    color: #1f2937;
+    font-size: 2rem;
+    margin-bottom: 35px;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+}
+
+.value-item {
+    background-color: #f0f9ff;
+    border: 2px solid #bfdbfe;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.value-item h4 {
+    color: #1e40af;
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+}
+
+.value-item p {
+    color: #4b5563;
+    line-height: 1.6;
+}
+
+.about-trust {
+    max-width: 1000px;
+    margin: 0 auto 50px;
+}
+
+.about-trust h3 {
+    text-align: center;
+    color: #1f2937;
+    font-size: 2rem;
+    margin-bottom: 35px;
+}
+
+.trust-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+}
+
+.reviews-highlight {
+    text-align: center;
+    background-color: #f9fafb;
+    padding: 35px;
+    border-radius: 8px;
+}
+
+.stars-large {
+    color: #fbbf24;
+    font-size: 2.5rem;
+    letter-spacing: 5px;
+    margin-bottom: 15px;
+}
+
+.review-count {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 15px;
+}
+
+.reviews-highlight p {
+    color: #4b5563;
+    line-height: 1.7;
+}
+
+.trust-points ul {
+    list-style: none;
+}
+
+.trust-points li {
+    padding: 12px 0;
+    color: #4b5563;
+    line-height: 1.7;
+}
+
+.trust-points strong {
+    color: #1e40af;
+}
+
+.about-community,
+.about-promise {
+    max-width: 900px;
+    margin: 0 auto 50px;
+}
+
+.about-community h3,
+.about-promise h3 {
+    color: #1f2937;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.about-community p,
+.about-promise p {
+    color: #4b5563;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    line-height: 1.7;
+}
+
+.promise-list {
+    list-style: none;
+    margin: 20px 0;
+}
+
+.promise-list li {
+    padding: 10px 0;
+    padding-left: 30px;
+    position: relative;
+    color: #4b5563;
+    line-height: 1.6;
+}
+
+.promise-list li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #1e40af;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* ============================================
+   CONTACT PAGE
+   ============================================ */
+
+.contact-content {
+    padding: 60px 20px;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 50px;
+    margin-bottom: 50px;
+}
+
+@media (min-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.contact-info h3,
+.contact-form-section h3 {
+    color: #1f2937;
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+}
+
+.contact-method {
+    margin-bottom: 30px;
+}
+
+.contact-method h4 {
+    color: #1e40af;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.contact-method p {
+    color: #4b5563;
+    line-height: 1.7;
+}
+
+.contact-phone-large {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.contact-phone-large a {
+    color: #1e40af;
+    text-decoration: none;
+}
+
+.contact-phone-large a:hover {
+    text-decoration: underline;
+}
+
+/* CONTACT FORM */
+
+.contact-form-section p {
+    color: #4b5563;
+    margin-bottom: 25px;
+    line-height: 1.7;
+}
+
+.contact-form {
+    background-color: #f9fafb;
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    color: #374151;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #1e40af;
+    box-shadow: 0 0 0 3px rgba(30, 64, 175, 0.1);
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+/* MAP SECTION */
+
+.map-section {
+    margin-bottom: 50px;
+}
+
+.map-section h3 {
+    text-align: center;
+    color: #1f2937;
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+}
+
+.map-container {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.emergency-reminder {
+    background-color: #fef2f2;
+    border: 2px solid #fee2e2;
+    padding: 40px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.emergency-reminder h3 {
+    color: #dc2626;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.emergency-reminder p {
+    color: #4b5563;
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+
+footer {
+    background-color: #1f2937;
+    color: #fff;
+    padding: 50px 20px 20px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-bottom: 30px;
+}
+
+.footer-section h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.footer-section p {
+    color: #d1d5db;
+    margin-bottom: 10px;
+}
+
+.footer-section a {
+    color: #93c5fd;
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    color: #dbeafe;
+    text-decoration: underline;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section li {
+    margin-bottom: 10px;
+}
+
+.footer-bottom {
+    border-top: 1px solid #374151;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: #9ca3af;
+    font-size: 0.9rem;
+}
+
+/* ============================================
+   RESPONSIVE ADJUSTMENTS
+   ============================================ */
+
+@media (max-width: 767px) {
+    .hero h2,
+    .page-header h2 {
+        font-size: 1.8rem;
+    }
+
+    .hero-subtitle,
+    .page-header p {
+        font-size: 1rem;
+    }
+
+    .logo h1 {
+        font-size: 1.2rem;
+    }
+
+    .phone-number {
+        display: none;
+    }
+
+    .phone-icon {
+        font-size: 1.5rem;
+    }
+
+    .nav-menu {
+        gap: 5px;
+    }
+
+    .nav-menu li a {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+
+    .services-overview h2,
+    .service-area h2 {
+        font-size: 1.6rem;
+    }
+
+    .btn-large {
+        padding: 14px 28px;
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-content {
+        padding: 12px 15px;
+    }
+
+    .container {
+        padding: 0 15px;
+    }
+
+    .sticky-call-btn {
+        bottom: 15px;
+        right: 15px;
+        padding: 12px 20px;
+        font-size: 1rem;
+    }
+}
