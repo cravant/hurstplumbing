@@ -242,7 +242,7 @@ nav {
 
 /* New: hero background image and overlay for readability */
 .hero-with-image {
-    background-image: url("pipes.jpg");
+    background-image: url("pipes.jpeg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
