@@ -967,12 +967,13 @@ footer {
 }
 
 .footer-section a {
-    color: #93c5fd;
+    color: #F4F6FB;          /* almost white for strong contrast */
+    font-weight: 500;        /* slightly bolder for readability */
     text-decoration: none;
 }
 
 .footer-section a:hover {
-    color: #dbeafe;
+    color: #FBBF24;          /* your warning yellow on hover */
     text-decoration: underline;
 }
 
