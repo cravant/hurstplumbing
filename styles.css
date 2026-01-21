@@ -234,10 +234,38 @@ nav {
    ============================================ */
 
 .hero {
-    background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
     color: #fff;
-    padding: 60px 20px;
+    padding: 80px 20px;
     text-align: center;
+    position: relative;
+}
+
+/* New: hero background image and overlay for readability */
+.hero-with-image {
+    background-image: url("pipes.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        135deg,
+        rgba(15, 23, 42, 0.8) 0%,
+        rgba(30, 64, 175, 0.75) 100%
+    );
+}
+
+.hero-inner {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-content {
+    max-width: 650px;
+    margin: 0 auto;
 }
 
 .hero h2 {
@@ -292,10 +320,43 @@ nav {
     padding: 60px 20px;
 }
 
+/* New: layout to allow image alongside services on desktop */
+.services-overview-layout {
+    display: grid;
+    grid-template-columns: 1.75fr 1.25fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.services-text {
+    min-width: 0;
+}
+
+.services-image {
+    display: none;
+    align-self: stretch;
+}
+
+.services-image img {
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.25);
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    max-height: 480px;
+}
+
+/* Show image on medium+ screens */
+@media (min-width: 900px) {
+    .services-image {
+        display: block;
+    }
+}
+
 .services-overview h2 {
-    text-align: center;
+    text-align: left;
     font-size: 2rem;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     color: #1f2937;
 }
 
@@ -303,7 +364,7 @@ nav {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 25px;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 
 .service-card {
@@ -326,6 +387,17 @@ nav {
 
 .text-center {
     text-align: center;
+}
+
+/* Stack layout on smaller screens */
+@media (max-width: 899px) {
+    .services-overview-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .services-overview h2 {
+        text-align: center;
+    }
 }
 
 /* ============================================
@@ -974,6 +1046,10 @@ footer {
    ============================================ */
 
 @media (max-width: 767px) {
+    .hero {
+        padding: 60px 20px;
+    }
+
     .hero h2,
     .page-header h2 {
         font-size: 1.8rem;
